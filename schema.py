@@ -242,7 +242,7 @@ class Use(object):
     def __repr__(self):
         return "%s(%r)" % (self.__class__.__name__, self._callable)
 
-    def validate(self, data, **kwargs):
+    def validate(self, data):
         try:
             return self._callable(data)
         except SchemaError as x:
